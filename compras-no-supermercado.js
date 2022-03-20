@@ -16,6 +16,9 @@ while (index < num ) {
 listas.map((i,d) => listaSet[d] = new Set(i));
 listaSet.map((i,d) => listas[d] = [...i]);
 
-listasString = listas.join();
-console.log(listaSet);
-//console.log(listasString.replace(/[,]/g, " "));
+let newIndex = 0;
+while(newIndex < num){
+    let listaString = listas[newIndex].sort().join();
+    console.log(listaString.replace(/[,]/g, " "));
+    newIndex++;
+}
